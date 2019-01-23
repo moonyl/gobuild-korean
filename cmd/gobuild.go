@@ -79,9 +79,9 @@ func main() {
 }
 
 func usage() {
-	fmt.Fprintln(os.Stdout, `gobuild 是 Go 的热编译工具，监视文件变化，并编译和运行程序。
+	fmt.Fprintln(os.Stdout, `Gobuild는 파일 변경을 모니터링하여 프로그램을 컴파일하고 실행하는 Go의 핫 컴파일 도구입니다.
 
-命令行语法：
+사용 방법：
  gobuild [options] [dependents]
 
  options:`)
@@ -91,22 +91,22 @@ func usage() {
 
 	fmt.Fprintln(os.Stdout, `
  dependents:
-  指定其它依赖的目录，只能出现在命令的尾部。
+  다른 종속성의 디렉토리를 지정하는 것은 명령의 끝에서만 나타날 수 있습니다.
 
 
-常见用法:
+사용 예:
 
  gobuild
-   监视当前目录，若有变动，则重新编译当前目录下的 *.go 文件；
+   현재 디렉터리를 모니터링하고 변경 사항이 있는 경우 현재 디렉터리의 *.go 파일을 다시 컴파일합니다.；
 
  gobuild -main=main.go
-   监视当前目录，若有变动，则重新编译当前目录下的 main.go 文件；
+   현재 디렉토리를 모니터링하고 변경 사항이 있는 경우 현재 디렉토리의 main.go 파일을 다시 컴파일합니다.；
 
  gobuild -main="main.go" dir1 dir2
-   监视当前目录及 dir1 和 dir2，若有变动，则重新编译当前目录下的 main.go 文件；
+   현재 디렉토리를 모니터링하고 dir1과 dir2가 변경된 경우 main.go 파일을 현재 디렉토리에 다시 컴파일합니다；
 
 
-NOTE: 不会监视隐藏文件和隐藏目录下的文件。
+NOTE: 숨긴 파일 및 숨긴 디렉터리의 파일은 모니터링하지 않습니다.
 
-源代码采用 MIT 开源许可证，并发布于 https://github.com/caixw/gobuild`)
+소스 코드는 MIT 오픈 소스 라이선스에 따라 사용이 허가 https://github.com/caixw/gobuild`)
 }
